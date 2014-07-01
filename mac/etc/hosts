@@ -13,11 +13,10 @@ fe80::1%lo0     localhost
 # Roteador Wireless
 192.168.0.1	modem roteador
 
-# Impressora HP
-#192.168.0.103 impressora hp
-
-# Notebook Lenovo.
-#192.168.0.105	lenovo
+# Rocket
+27.0.0.1 solr
+127.0.0.1 linioco.alice linioco.bob linioco.conny linioco.images
+# Rocket
 
 # Block Adobe Activation
 127.0.0.1	activate.adobe.com
