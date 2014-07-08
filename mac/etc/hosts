@@ -16,6 +16,7 @@ fe80::1%lo0     localhost
 # Rocket
 127.0.0.1 solr
 127.0.0.1 linioco.alice linioco.bob linioco.conny linioco.images
+127.0.0.1 liniopa.alice liniopa.bob liniopa.conny liniopa.images
 # Rocket
 
 # Block Adobe Activation

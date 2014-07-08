@@ -19,6 +19,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias e='mate'
+alias r="php /Users/leonardo/workspace/linio/bin/rocket.php"
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
