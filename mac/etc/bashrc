@@ -20,6 +20,9 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias e='mate'
 alias r="php /Users/leonardo/workspace/linio/bin/rocket.php"
+alias phpdoc='php /usr/bin/phpDocumentor.phar'
+alias phpunit='clear ; phpunit'
+alias phing='clear ; phing'
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
