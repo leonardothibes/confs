@@ -1,4 +1,5 @@
 # MacPorts Installer addition on 2013-04-10_at_10:22:39: adding an appropriate PATH variable for use with MacPorts.
 CELLAR=/usr/local/Cellar
-export PATH="$CELLAR/httpd24/2.4.10/bin:$CELLAR/php54/5.4.30/bin:$PATH"
+#export PATH="$CELLAR/httpd24/2.4.10/bin:$CELLAR/php54/5.4.30/bin:$PATH"
+export PATH="$CELLAR/httpd22/2.2.27/bin:$CELLAR/php54/5.4.30/bin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.

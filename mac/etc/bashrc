@@ -19,6 +19,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias e='mate'
+alias s='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 alias r="php /Users/leonardo/workspace/linio/bin/rocket.php"
 alias phpdoc='php /usr/bin/phpDocumentor.phar'
 alias phpunit='clear ; phpunit'
