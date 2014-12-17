@@ -1,12 +1,19 @@
 CELLAR=/usr/local/Cellar
 
 export PATH="$CELLAR/httpd22/2.2.27/bin:$CELLAR/php54/5.4.30/bin:$PATH"
+#export PATH="$CELLAR/httpd22/2.2.27/bin:$CELLAR/php55/5.5.15/bin:$PATH"
 export XDEBUG_CONFIG="idekey=PHPSTORM"
 . $(brew --prefix)/etc/bash_completion
 
+export GOPATH=$HOME/workspace/go
+export PATH=$PATH:$GOPATH/bin
+
 if [ ! -d /tmp/xdebug ]; then
 	mkdir /tmp/xdebug
-	chmod 777 /tmp/xdebug
+	chmod -R 777 /tmp/xdebug
 else
 	rm -f /tmp/xdebug/*
 fi
+
+> /tmp/debug.log
+chmod 777 /tmp/debug.log
