@@ -13,11 +13,19 @@ fe80::1%lo0     localhost
 # Roteador Wireless
 192.168.0.1	modem roteador
 
-# Rocket
+# Outros sites
+127.0.0.1 info.local info
+127.0.0.1 phpmyadmin.local phpmyadmin mysql
+127.0.0.1 rabbit.local rabbit
+127.0.0.1 shop-front.dev shop-front
+# Outros sites
+
+# Linio
 127.0.0.1 solr
-127.0.0.1 linioco.alice linioco.bob linioco.conny linioco.images
+127.0.0.1 linioar.alice linioar.bob linioar.conny linioar.images
 127.0.0.1 liniopa.alice liniopa.bob liniopa.conny liniopa.images
-# Rocket
+127.0.0.1 liniomx.alice liniomx.bob liniomx.conny liniomx.images
+# Linio
 
 # Block Adobe Activation
 127.0.0.1	activate.adobe.com
