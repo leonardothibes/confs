@@ -1,6 +1,6 @@
 CELLAR=/usr/local/Cellar
 
-export PATH="$CELLAR/rabbitmq/3.4.2/sbin:$CELLAR/php54/5.4.30/bin:$PATH"
+export PATH="$CELLAR/rabbitmq/3.4.2/sbin:$CELLAR/php54/5.4.30/bin:/usr/local/elasticsearch/current/bin:$PATH"
 export XDEBUG_CONFIG="idekey=PHPSTORM"
 . $(brew --prefix)/etc/bash_completion
 
