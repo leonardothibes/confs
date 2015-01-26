@@ -6,9 +6,12 @@ export PATH="$CELLAR/php54/5.4.30/bin:$HOME/.bin:$PATH"
 export XDEBUG_CONFIG="idekey=PHPSTORM"
 . $(brew --prefix)/etc/bash_completion
 
+# Go language configuration
 export GOPATH=$HOME/workspace/go
 export PATH=$PATH:$GOPATH/bin
+# Go language configuration
 
+# Xdebug log dir
 if [ ! -d /tmp/xdebug ]; then
 	mkdir /tmp/xdebug
 	chmod -R 777 /tmp/xdebug
@@ -18,3 +21,7 @@ fi
 
 > /tmp/debug.log
 chmod 777 /tmp/debug.log
+# Xdebug log dir
+
+# PHP Error: to many open files....
+ulimit -n 1024
