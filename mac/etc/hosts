@@ -19,6 +19,7 @@ fe80::1%lo0     localhost
 127.0.0.1 rabbit.local rabbit
 127.0.0.1 symfony2-estudo.dev symfony2-estudo
 127.0.0.1 shop-front.dev shop-front
+127.0.0.1 mangopay.local mangopay
 # Outros sites
 
 # Linio
