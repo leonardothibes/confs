@@ -15,7 +15,7 @@ fe80::1%lo0     localhost
 
 # Outros sites
 127.0.0.1 info.local info
-127.0.0.1 phpmyadmin.local phpmyadmin mysql
+127.0.0.1 phpmyadmin.local phpmyadmin mysql mysql.local
 127.0.0.1 rabbit.local rabbit
 127.0.0.1 symfony2-estudo.dev symfony2-estudo
 127.0.0.1 shop-front.dev shop-front
@@ -60,5 +60,5 @@ fe80::1%lo0     localhost
 127.0.0.1   ativar sea.adobe.com-
 127.0.0.1   WWIS-dubc1 vip60.adobe.com-
 127.0.0.1   ativar sjc0.adobe.com-
-127.0.0.1   WWIS-dubc1 vip60.adobe.com-
+127.0.0.1   WWIS-dubc2 vip60.adobe.com-
 # Block Adobe Activation
