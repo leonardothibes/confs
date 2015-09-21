@@ -24,8 +24,8 @@ alias phpdoc='php /usr/bin/phpDocumentor.phar'
 alias phpunit='clear ; phpunit'
 alias phing='clear ; phing'
 alias ant='clear ; ant'
-alias composer='clear ; composer'
-alias bower='clear ; bower'
+#alias composer='clear ; composer'
+#alias bower='clear ; bower'
 alias s='clear ; ./app/console'
 
 # Make bash check its window size after a process completes
