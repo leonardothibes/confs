@@ -18,15 +18,13 @@ alias ls='ls -h'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias r="php /Users/leonardo/workspace/linio/bin/rocket.php"
 alias e='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias phpdoc='php /usr/bin/phpDocumentor.phar'
 alias phpunit='clear ; phpunit'
 alias phing='clear ; phing'
 alias ant='clear ; ant'
-#alias composer='clear ; composer'
-#alias bower='clear ; bower'
 alias s='clear ; ./app/console'
+alias warmup-telesena='clear ; /Users/leonardo/workspace/telesena-warmup/warmup'
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
