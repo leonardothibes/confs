@@ -1,7 +1,7 @@
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
-alias ls='ls -h'
+alias ls='ls -h --color'
 alias e='subl'
 alias flushdns='sudo service nscd restart'
 alias storm='/usr/local/phpstorm/bin/phpstorm.sh'
