@@ -2,7 +2,7 @@
 Active=true
 Name=Abrir no Sublime Text
 Comment=Abrir no Sublime Text
-Exec=<subl %F>
+Exec=/usr/bin/subl "%F"
 Selection=S
 Extensions=any;
 Icon-Name=sublime-text
