@@ -7,7 +7,7 @@ CELLAR=/usr/local/Cellar
 #export PATH="$CELLAR/php56/5.6.10/bin:$HOME/.bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export XDEBUG_CONFIG="idekey=PHPSTORM"
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH:$HOME/.bin"
 . $(brew --prefix)/etc/bash_completion
 
 # Go language configuration
