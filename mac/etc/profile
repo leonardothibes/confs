@@ -8,5 +8,4 @@ if [ "${BASH-no}" != "no" ]; then
 	[ -r /etc/bashrc ] && . /etc/bashrc
 fi
 
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH="/usr/local/opt/subversion@1.8/bin:$PATH"
+export PATH=$HOME/.bin:/opt/local/bin:/opt/local/sbin:$PATH
