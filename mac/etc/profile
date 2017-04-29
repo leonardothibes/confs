@@ -8,4 +8,4 @@ if [ "${BASH-no}" != "no" ]; then
 	[ -r /etc/bashrc ] && . /etc/bashrc
 fi
 
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
