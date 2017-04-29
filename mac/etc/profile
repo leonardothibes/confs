@@ -9,3 +9,4 @@ if [ "${BASH-no}" != "no" ]; then
 fi
 
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH="/usr/local/opt/subversion@1.8/bin:$PATH"

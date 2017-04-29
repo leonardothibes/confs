@@ -4,13 +4,8 @@ CELLAR=/usr/local/Cellar
 
 export PATH="/usr/local/sbin:$PATH"
 export XDEBUG_CONFIG="idekey=PHPSTORM"
-export PATH="$(brew --prefix homebrew/php/php70)/bin:/usr/local/bin:$PATH:$HOME/.bin"
+export PATH="$(brew --prefix subversion@1.8)/bin:$(brew --prefix homebrew/php/php70)/bin:/usr/local/bin:$PATH:$HOME/.bin"
 . $(brew --prefix)/etc/bash_completion
-
-# Go language configuration
-export GOPATH=$HOME/workspace/go
-export PATH=$PATH:$GOPATH/bin
-# Go language configuration
 
 # Xdebug log dir
 if [ ! -d /tmp/xdebug ]; then
