@@ -22,8 +22,9 @@ alias e='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias phpdoc='php /usr/bin/phpDocumentor.phar'
 alias phpunit='clear ; ./bin/phpunit'
 alias phing='clear ; phing'
+alias mocha='clear ; ./node_modules/.bin/mocha'
 alias ant='clear ; ant'
-alias s='clear ; ./app/console'
+alias s='clear ; ./bin/console'
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize

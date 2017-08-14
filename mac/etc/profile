@@ -8,4 +8,8 @@ if [ "${BASH-no}" != "no" ]; then
 	[ -r /etc/bashrc ] && . /etc/bashrc
 fi
 
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+export PATH=$HOME/.bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
