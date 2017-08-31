@@ -24,5 +24,6 @@ fi
 alias svndiff='svn diff | meld -'
 
 export SVN_EDITOR=vim
+export GIT_EDITOR=vim
 export AWS_DEFAULT_REGION=us-east-1
 export XDEBUG_CONFIG="idekey=PHPSTORM"
