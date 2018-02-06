@@ -22,6 +22,7 @@ if [ -d "$HOME/.bin" ] ; then
 fi
 
 alias svndiff='svn diff | meld -'
+alias gitdiff='git diff | meld -'
 
 export SVN_EDITOR=vim
 export GIT_EDITOR=vim
