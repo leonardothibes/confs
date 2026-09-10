@@ -24,12 +24,14 @@ ZSH_THEME="robbyrussell"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
+ zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
+
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -74,6 +76,20 @@ plugins=(git git-flow-completion)
 
 source $ZSH/oh-my-zsh.sh
 
+# # Customização do prompt: mostra usuário@hostname fora de projetos Git
+# function custom_prompt_info() {
+#   if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+#     # Está em um repositório Git, não mostra nada (o tema já cuida disso)
+#     echo ""
+#   else
+#     # Não está em um repositório Git, mostra usuário@hostname
+#     echo "%{$fg[green]%}%n@%m%{$reset_color%} "
+#   fi
+# }
+
+# # Sobrescreve o prompt do robbyrussell para incluir a customização
+# PROMPT='$(custom_prompt_info)%{$fg_bold[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -96,28 +112,96 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+#alias docker-compose='/Applications/Docker.app/Contents/Resources/cli-plugins/docker-compose'
 alias e='/Applications/Sublime\ Text.app/Contents/MacOS/sublime_text'
 alias chupakabra='clear ; chupakabra'
 alias localstack='clear ; localstack'
 alias vim='vim -u ~/.vimrc'
+alias mysqldump='mysqldump --protocol tcp'
+alias mysql='mysql --protocol tcp'
 alias mp='multipass'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
+alias ls='ls -h --color'
+alias login-kb-dev='aws sso login --profile inovacao-dev'
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# NODE + NPM + NVM
+export NVM_DIR="$HOME/.nvm"
+
+# Carregamento sob demanda (Lazy Load)
+nvm() {
+  unset -f nvm node npm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm "$@"
+}
+node() {
+  unset -f nvm node npm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  node "$@"
+}
+npm() {
+  unset -f nvm node npm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  npm "$@"
+}
+# NODE + NPM + NVM
+
+export PATH="/opt/homebrew/Cellar/ruby@3.3/3.3.7/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
+export PATH="/opt/homebrew/Cellar/mysql@8.4/8.4.4/bin:$PATH"
 export PATH="$PATH:$HOME/.bin:$HOME/.nvm/versions/node/v20.11.1/bin"
+export PATH="$PATH:/Users/leonardo.thibes/.dotnet/tools"
+export PATH="/opt/homebrew/opt/php@8.2/bin:/opt/homebrew/Cellar/mysql@8.4/8.4.3_4/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
 
 export GIT_EDITOR=vim
 export ASPNETCORE_ENVIRONMENT=Local
 
-export LOCALSTACK_AUTH_TOKEN="YOUR-TOKEN-GOES-HERE"
+export LOCALSTACK_AUTH_TOKEN="ls-nAWuSati-gagI-NuZU-3172-yoRenICi15c1"
 export ACTIVATE_PRO=0
+
+autoload bashcompinit && bashcompinit
+source $(brew --prefix)/etc/bash_completion.d/az
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/Users/leonardo.thibes/.miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/Users/leonardo.thibes/.miniconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/leonardo.thibes/.miniconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/Users/leonardo.thibes/.miniconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+# <<< conda initialize <<<
+
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+# bun completions
+[ -s "/Users/leonardo.thibes/.bun/_bun" ] && source "/Users/leonardo.thibes/.bun/_bun"
+
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
+# Carrega o autocompletion do Angular apenas se o comando existir
+if command -v ng &> /dev/null; then
+  # Se quiser manter o autocompletion sem travar o boot, 
+  # rode 'ng completion script > ~/.ng-completion.zsh' uma vez no terminal 
+  # e carregue o arquivo estático abaixo:
+  [ -f "$HOME/.ng-completion.zsh" ] && source "$HOME/.ng-completion.zsh"
+fi
+# Load Angular CLI autocompletion.
+
+. "$HOME/.local/bin/env"
